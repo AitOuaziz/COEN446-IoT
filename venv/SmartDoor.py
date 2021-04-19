@@ -1,7 +1,7 @@
 import paho.mqtt.publish as publish
 import paho.mqtt.client as mqtt
 
-MQTT_BROKER = "192.168.2.82"
+MQTT_BROKER = "localhost"
 
 class SmartDoor:
     def __init__(self):
@@ -9,7 +9,7 @@ class SmartDoor:
 
     def greeting(self):
         print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+")
-        print("- Welcome to the Management App                             -")
+        print("- Welcome to Smart Door                                     -")
         print("+ Use: quit - Quit the Management app                       +")
         print("- Use: move Name Location - to move a resident              -")
         print("+ Name: name of a resident                                  +")

@@ -1,7 +1,7 @@
 import paho.mqtt.client as mqtt
 from Resident import Resident
 
-MQTT_BROKER = "192.168.2.82"
+MQTT_BROKER = "localhost"
 BASE_TEMPERATURE = 15
 
 class Thermostat:

@@ -17,6 +17,7 @@ class Management:
         self.residentList.append(Resident(name,temperature))
         payload = name+" "+str(temperature)
         publish.single(topic="Resident", payload=payload, hostname=MQTT_BROKER)
+        print("Topic: Resident, Payload: "+payload+ ". To: "+MQTT_BROKER)
         print(name + " has been added!")
 
     def removeResident(self, name):
@@ -43,12 +44,10 @@ if __name__ == '__main__':
     client.connect(MQTT_BROKER)
     command = input("Please type a command: ")
     while (command.lower() != "quit"):
-        if(command.startswith("add")):
+        if(command.lower().startswith("add")):
             name = command.split()[1]
             temperature = command.split()[2]
             m.addResident(name, int(temperature))
-        #elif (command.lower().startswith("list")):
-        #    m.printResident()
         command = input("Please type a command: ")
 
 

@@ -64,6 +64,11 @@ python3 main.py
 ```
 All the source file (*.py) of this project must be in the same directory.
 
+### Note
+To use an external mqtt broker, you must change the value of `<MQTT_BROKER>`
+inside the files Management.py, SmartDoor.py and Thermostat.py to the
+ip address of the broker of your choice.
+
 
 
 

@@ -51,7 +51,6 @@ if __name__ == '__main__':
             m.addResident(name, int(temperature))
         elif (command.lower().startswith("list")):
             m.printResident()
-
         command = input("Please type a command: ")
 
 

@@ -11,7 +11,6 @@ class Thermostat:
 
     def addResident(self, name, temperature):
         self.residentList.append(Resident(name,temperature))
-        print(name + " has been added!")
 
     def changeTemperature(self):
         residentsTemperature = []
@@ -52,7 +51,7 @@ class Thermostat:
                         resident.setLocation(True)
                     elif(message[1] == "out"):
                         resident.setLocation(False)
-
+            self.changeTemperature()
 
 if __name__ == '__main__':
     t = Thermostat()

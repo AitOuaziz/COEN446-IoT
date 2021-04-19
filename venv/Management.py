@@ -17,7 +17,7 @@ class Management:
         self.residentList.append(Resident(name,temperature))
         payload = name+" "+str(temperature)
         publish.single(topic="Resident", payload=payload, hostname=MQTT_BROKER)
-        print("Topic: Resident, Payload: "+payload+ ". To: "+MQTT_BROKER)
+        print("log: "+"Topic: Resident, Payload: "+payload+ ". To: "+MQTT_BROKER)
         print(name + " has been added!")
 
     def removeResident(self, name):

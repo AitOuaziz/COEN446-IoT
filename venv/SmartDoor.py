@@ -29,5 +29,5 @@ if __name__ == '__main__':
             location = command.split()[2]
             payload = name + " " + location
             publish.single(topic="Door", payload=payload, hostname=MQTT_BROKER)
-            print("Topic: Door, Payload: " + payload + ". To: " + MQTT_BROKER)
+            print("log: "+"Topic: Door, Payload: " + payload + ". To: " + MQTT_BROKER)
         command = input("Please type a command: ")

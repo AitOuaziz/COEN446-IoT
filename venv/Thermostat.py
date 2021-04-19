@@ -40,7 +40,7 @@ class Thermostat:
             print("connection fail")
 
     def on_message(self, client, userdata, msg):
-        print(msg.topic + " " + str(msg.payload))
+        print("log: "+msg.topic + " " + str(msg.payload))
         if(msg.topic == "Resident"):
             message = msg.payload.decode("utf-8").split()
             self.addResident(message[0],int(message[1]))
